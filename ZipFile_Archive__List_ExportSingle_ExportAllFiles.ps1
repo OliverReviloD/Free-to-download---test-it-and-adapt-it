@@ -96,6 +96,15 @@ Function Export-ZipFile_SingleFile {
 
 
 # #############################################
+# PS1 - 'Expand-archive' full ZIP, all files   - this is not working with self-extracting EXE
+#
+#        Expand-archive -Path $DownloadedDrvFile -Destinationpath $ExpandedDrvArchive -Verbose
+#
+#      Self-Extracting-WinZip.Exe
+# & myWinZipSelfExtract.exe -Info                          # =>  -win32 -i* -le -d* -overwrite -runasuser -c .\install.exe
+# & myWinZipSelfExtract.exe /auto     C:\my-files\test
+# & myWinZipSelfExtract.exe -unzipDir C:\my-files\test     # WinZIP UI will get displayed
+# & $DownloadedDrvFile  /auto  $ExpandedDrvArchive         # Expand occurs, but Driver-Setup-GUI will get started 
 # #############################################
 Function Export-ZipFile_AllFiles {
     Param( [string]$ZipFilePath,
