@@ -109,8 +109,8 @@ Function Main {
     $DownloadFolder  = "($Env:Temp)\HPLJ1525nw_Driver"
     $CloudFileName   = "HPLJ1525nw_Driver.ZIP"
     $CloudUrl        = "https://raw.githubusercontent.com/OliverReviloD/Free-to-download---test-it-and-adapt-it/refs/heads/main/HPLJ1525nw_Driver.ZIP"
-     Download-FromCloud -DownloadFolder  $DownloadFolder  -CloudFileName  $CloudFileName -CloudUrl $CloudUrl
-     return
+    Download-FromCloud -DownloadFolder  $DownloadFolder  -CloudFileName  $CloudFileName -CloudUrl $CloudUrl
+    return
     $DriverSourceDir = "D:\__B\Pri\Print\hpc1520u.inf_exported"
     $DriverINF       = "hpc1520u.inf"                                 # from HP download
     $DriverName      = "HP LaserJet Professional CP1520 Series PCL 6" # from HP download
