@@ -31,12 +31,86 @@
 
 cls
 
+Function Download-FromCloud
+    {
+    param( 
+       [Parameter(Mandatory=$true)][string] $DownloadFolder,
+       [Parameter(Mandatory=$true)][string] $CloudFileName,
+       [Parameter(Mandatory=$true)][string] $CloudUrl)
+       
+    Write-Host "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+    Write-Host "W  - verify download folder '$DownloadFolder' exists"
+    Write-Host "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+    if (!(test-path $DownloadFolder)) { 
+        Write-Host "'$DownloadFolder' is missing - will be created"
+        Try 
+            {
+            $NewFolder = new-item $DownloadFolder -ItemType Directory -force # -verbose 
+            if (  test-path $DownloadFolder)  { Write-Host "'$DownloadFolder' is created" ; Write-host}
+            }
+        catch
+            {
+            if ((New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
+                {  
+                # elevated
+                }
+            else
+                {
+                Write-Output "Elevation is required"
+                Write-Output "ACCESS DENIED to create download folder '$DownloadFolder'"
+                return 5
+                }    
+            if (!(test-path $DownloadFolder)) { Write-Host "'$DownloadFolder' cannot be created - EXIT 5" -ForegroundColor Red; Exit 5 }
+            }   # END CATCH
+        }  # END DownloadFolder does not exists
+    if (  test-path $DownloadFolder)  { Write-Host "'$DownloadFolder' exists" ; Write-host}    
+    
+    $CloudFileDownloadedPath = "$DownloadFolder\$CloudFileName"
+    Write-Host "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+    Write-Host "W  - verify 'cloud file' exists at '$CloudFileDownloadedPath'  "
+    Write-Host "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+    if (!(Test-Path $CloudFileDownloadedPath)) {
+        write-Host "Downloading from cloud '$CloudUrl'" -ForegroundColor Yellow
+        write-Host "Downloading to         '$CloudFileDownloadedPath'" -ForegroundColor Yellow
+        try {
+           # $Response  = Invoke-WebRequest -Uri $CloudUrl -OutFile $CloudFileDownloadedPath -UserAgent ([Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer)  -Verbose
+           # $StatusDescription = $Response.StatusDescription   # OKAY
+           # $StatusCode        = $Response.StatusCode          # 200
+            Invoke-WebRequest -Uri $CloudUrl -OutFile $CloudFileDownloadedPath -UserAgent ([Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer)  -Verbose # -Proxy $ProxyServer
+            }
+        catch [System.Net.WebException]
+            {
+            Write-Output "Ran into an issue: $($PSItem.ToString())"
+            Write-Output "Unable to download .... from '$CloudFileDownloadedPath'"
+            exit 1
+            }
+        catch [UnauthorizedAccessException]
+            {
+            Write-Output "Elevation is required"
+            Write-Output "ACCESS DENIED to save to '$CloudFileDownloadedPath'"
+            exit 5
+            }
+        catch 
+            {
+            $PSItem
+            exit 5
+            }
+        }
+    else { write-host "cloud file '$CloudFileDownloadedPath' already downloaded" }
 
+    
+    }
 Function Main {
 
     $PortHostAddress = "192.168.0.190"
     $PortNumber      = "9100"
     $PortName        = "HPLJ1525nwPort:"
+    
+    $DownloadFolder  = "($Env:Temp)\HPLJ1525nw_Driver"
+    $CloudFileName   = "HPLJ1525nw_Driver.ZIP"
+    $CloudUrl        = "https://raw.githubusercontent.com/OliverReviloD/Free-to-download---test-it-and-adapt-it/refs/heads/main/HPLJ1525nw_Driver.ZIP"
+     Download-FromCloud -DownloadFolder  $DownloadFolder  -CloudFileName  $CloudFileName -CloudUrl 
+     return
     $DriverSourceDir = "D:\__B\Pri\Print\hpc1520u.inf_exported"
     $DriverINF       = "hpc1520u.inf"                                 # from HP download
     $DriverName      = "HP LaserJet Professional CP1520 Series PCL 6" # from HP download
@@ -45,7 +119,9 @@ Function Main {
 
     $PrinterPortSNMP = [PSCustomObject]@{     SNMPEnabled = $True;  SNMPCommunity = 'public';  SNMPIndex = 1}
 
-
+   
+return
+    
     get-printer -name $PrinterName -ErrorAction SilentlyContinue  | FT | Out-string | Write-Host
     if ( Check-Elevation -eq $True) { Remove-MyPrinter       -PrinterName $PrinterName }
     Else                            { Write-Host "exiting 'Printer' will not get removed (elevation required) " -ForegroundColor Yellow }
