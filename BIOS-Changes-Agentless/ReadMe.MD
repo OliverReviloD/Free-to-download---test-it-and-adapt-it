@@ -1,1 +1,0 @@
-BIOS-Changes_Agentless_v2.ps1
