@@ -10,7 +10,7 @@
 2) Add nuget.org as source
 3) Install WIX
 4) Download and install WIX Toolkit 3.1...
-5) Download and install Orca (MSI-Table editor
+5) Download and install Orca (MSI-Table editor)
 
 
 ###########################
