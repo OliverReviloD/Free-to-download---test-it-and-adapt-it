@@ -24,7 +24,7 @@ C) Rename file ( extracted-by-dark.exe ) to MSI      C:\Temp\Extracted\AttachedC
 D) extract MSI content     C:\Temp\ExtractedMSI
 
 # ###############################################
-1) Install .NET 11 SDK
+1) Install .NET 10 SDK
 # ###############################################
 
 https://aka.ms/dotnet/download
