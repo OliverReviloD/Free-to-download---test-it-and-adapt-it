@@ -67,7 +67,7 @@ view the video  https://www.youtube.com/watch?v=F4K0kXv4-TQ
     https://github.com/wixtoolset/wix3/releases/tag/wix3141rtm
 
 # ###############################################
-5) Download and install Orca (MSI-Table editor
+5) Download and install Orca (MSI-Database-Table editor) 
 # ###############################################
 
         is part of the MS-Platform-SDK
