@@ -1,4 +1,4 @@
-	[Extract_a_WIX_Package__DUP_2_EXE_2_MSI.ps1](#Extract-a-WIX-Package-DUP-2-EXE-2-MSI)
+[click here to jump to my Extract_a_WIX_Package__DUP_2_EXE_2_MSI.ps1](#Extract_a_WIX_Package_DUP_2_EXE_2_MSI)	
 
 
 
@@ -13,7 +13,7 @@ WindowsSubsystemForLinux_(WSL)_Uninstall.ps1
 ###############################################  
 #Extract
 
-
+<a name="Extract_a_WIX_Package_DUP_2_EXE_2_MSI"></a>
 Extract_a_WIX_Package__DUP_2_EXE_2_MSI.ps1
   
 # ###############################################
