@@ -14,6 +14,7 @@ Install .NET SDK 10
     
 Check if 'nuget.org' as registered as source   - if not already registered
   
+dotnet nuget list source  
 <img width="758" height="134" alt="image" src="https://github.com/user-attachments/assets/c60a8abc-2f53-4b06-b4ce-27e50c454847" />
    
 (Add it as source:      dotnet nuget add source "https://api.nuget.org/v3/index.json" --name "nuget.org"     )
