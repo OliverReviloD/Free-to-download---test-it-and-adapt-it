@@ -1,5 +1,6 @@
-[click here to jump to 'Extract_a_WIX_Package__DUP_2_EXE_2_MSI'](#Extract_a_WIX_Package_DUP_2_EXE_2_MSI)	
-[click here to jump to 'WindowsSubsystemForLinux_(WSL)_Uninstall.ps1'](#WindowsSubsystemForLinux_(WSL)_Uninstall)	
+[click here to jump to 'Extract_a_WIX_Package__DUP_2_EXE_2_MSI'](#Extract_a_WIX_Package_DUP_2_EXE_2_MSI)  
+  
+[click here to jump to 'WindowsSubsystemForLinux_(WSL)_Uninstall.ps1'](#WindowsSubsystemForLinux_(WSL)_Uninstall)  
 
 
 <a name="WindowsSubsystemForLinux_(WSL)_Uninstall"></a>
