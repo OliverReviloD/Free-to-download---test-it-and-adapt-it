@@ -1,3 +1,7 @@
+	[Extract_a_WIX_Package__DUP_2_EXE_2_MSI.ps1](#Extract-a-WIX-Package-DUP-2-EXE-2-MSI)
+
+
+
 WindowsSubsystemForLinux_(WSL)_Uninstall.ps1  
 
 <img width="257" height="174" alt="WindowsSubsystemForLinux_(WSL)" src="https://github.com/user-attachments/assets/044f8499-45ce-4c75-b390-ba9179c69131" />
@@ -7,7 +11,8 @@ WindowsSubsystemForLinux_(WSL)_Uninstall.ps1
 ###############################################  
 ###############################################  
 ###############################################  
-#Extract_a_WIX_Package__DUP_2_EXE_2_MSI
+#Extract-a-WIX-Package-DUP-2-EXE-2-MSI
+
 
 Extract_a_WIX_Package__DUP_2_EXE_2_MSI.ps1
   
