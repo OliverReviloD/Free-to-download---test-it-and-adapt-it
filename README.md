@@ -54,5 +54,5 @@ https://www.dell.com/support/home/de-de/drivers/driversdetails?driverid=ny2v6
 
 
 After RENAME you are ready to use the MSI as usual  
-img width="924" height="414" alt="image" src="https://github.com/user-attachments/assets/0f1efc03-eb4e-4f68-bd8d-1afe2f642759" />
+<img width="924" height="414" alt="image" src="https://github.com/user-attachments/assets/0f1efc03-eb4e-4f68-bd8d-1afe2f642759" />
 
