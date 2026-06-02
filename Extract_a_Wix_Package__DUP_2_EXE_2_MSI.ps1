@@ -21,7 +21,7 @@
 A) Download and extract your desired software package  - e.g.  DELL DUP-format     Dell-SupportAssist-OS-Recovery-Plugin_XVV9X_WIN64_5.5.16.1_A00.EXE
 B) Extract your desired software package (WIX-package) - e.g.       WIX-formmat    "C:\Temp\DellUpdateSupportAssistPlugin.exe"        
 C) Rename file ( extracted-by-dark.exe ) to MSI      C:\Temp\Extracted\AttachedContainer\FileXyz  => FileXyz.MSI
-
+D) extract MSI content     C:\Temp\ExtractedMSI
 
 # ###############################################
 1) Install .NET 11 SDK
@@ -83,7 +83,6 @@ view the video  https://www.youtube.com/watch?v=F4K0kXv4-TQ
 
 
       
-C)
 # ###############################################
 A) Download and extract your desired software package  - e.g.  DELL DUP-format     Dell-SupportAssist-OS-Recovery-Plugin_XVV9X_WIN64_5.5.16.1_A00.EXE
 # ###############################################
