@@ -11,7 +11,7 @@ WindowsSubsystemForLinux_(WSL)_Uninstall.ps1
 ###############################################  
 ###############################################  
 ###############################################  
-#Extract-a-WIX-Package-DUP-2-EXE-2-MSI
+#Extract
 
 
 Extract_a_WIX_Package__DUP_2_EXE_2_MSI.ps1
