@@ -29,7 +29,7 @@ D) extract MSI content     C:\Temp\ExtractedMSI
 
 https://aka.ms/dotnet/download
 
-    .NET 11 SDK 
+    .NET 10 SDK 
 
 https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-10.0.300-windows-x64-installer
 
