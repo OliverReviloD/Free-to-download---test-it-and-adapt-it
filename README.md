@@ -23,4 +23,7 @@ Install WIX
 
 
 Download and install WIX Toolkit 3.1
+  
 <img width="3440" height="1440" alt="image" src="https://github.com/user-attachments/assets/1a932c37-620e-4b74-a9d7-d19ec53e39a8" />
+
+
