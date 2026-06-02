@@ -15,7 +15,8 @@ Check if 'nuget.org' as registered as source   - if not already registered
 (Add it as source:      dotnet nuget add source "https://api.nuget.org/v3/index.json" --name "nuget.org"     )
   
 Install WIX
-<img width="3440" height="1440" alt="image" src="https://github.com/user-attachments/assets/b772bddb-026f-42ae-8afb-a44560f48247" />
+<img width="569" height="114" alt="image" src="https://github.com/user-attachments/assets/4d6b473e-e361-4cf6-8c98-f29ee3f574ca" />
+
 
 Download and install WIX Toolkit 3.1
 <img width="3440" height="1440" alt="image" src="https://github.com/user-attachments/assets/1a932c37-620e-4b74-a9d7-d19ec53e39a8" />
