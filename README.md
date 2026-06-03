@@ -10,11 +10,26 @@ WindowsSubsystemForLinux_(WSL)_Uninstall.ps1
 <img width="386" height="274" alt="image" src="https://github.com/user-attachments/assets/6704d94d-01a4-4929-8faf-68050ef4bfc7" />
 
 
-###############################################  
-###############################################  
-###############################################  
+
 <a name="Extract_a_WIX_Package_DUP_2_EXE_2_MSI"></a>
+
+
+# <ins>Extract software source files from WiX-Setup installer</ins>
 Extract_a_WIX_Package__DUP_2_EXE_2_MSI.ps1
+
+MsiExec is a standard Microsoft package installer  
+InstallShield is a common software for the creation of MSI-files - but **InstallShield is expensive**
+
+WiX is a freeware for creatings MSI packages. WiX is capable to create **Self-Extracting** executables as wrapper for these MSIs.
+Based on WiX package settings you may be prevented to extract the content of such as wrapper.
+
+Using a WiX-Toolset ( freeware ) you are able to extract the content of such a WiX setup wrapper. e.g.  
+
+| Action | file format | example |
+| --- | --- | --- |
+| downloaded | DELL-DUP file | Dell-SupportAssist-OS-Recovery-Plugin-for-Dell-Update_NY2V6_WIN64_5.5.16.0_A00.EXE  
+| extracted DUP | WiX - selfextract | DellUpdateSupportAssistPlugin.exe  
+| extracted WiX | MSI Installer | PlugInSetup.MSI  
   
 # ###############################################
 Prepare admin PC
